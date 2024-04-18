@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
 	<head>
+		<meta charset="UTF-8">
 		<title>Disney Shopping Page</title>
 		<style>
 			table {
@@ -26,7 +27,7 @@
 			  background-color: #76d0c0;
 			}
 
-			h1, h2 {
+			h1, h2, form {
 				text-align:center;
 			}
 
@@ -46,6 +47,25 @@
                 background-color:#746bab;
                 color:white;
             }
+
+			.loginform {
+				background-color:#fbbe4f;
+				width:20%;
+				margin:auto;
+			}
+
+			.loginbutton {
+				background-color: #4a62d8;
+				color: white;
+				border-radius:10px;
+
+			}
+
+			.forminput {
+				border-radius:4px;
+
+			}
+
             #storeh2 {
                 font-style: italic;
             }
@@ -58,7 +78,7 @@
 	<body>
         <h1 id="storeh2">Welcome to the Disney Store!</h1>
 		<p style="text-align:center;">
-			<img alt="Disney Shop"src="https://insidethemagic.net/wp-content/uploads/2021/08/Disney-Store-Shop-Disney.jpg" width="300">
+			<img alt="Shop Disney!" src="https://insidethemagic.net/wp-content/uploads/2021/08/Disney-Store-Shop-Disney.jpg" width="300">
 		</p>
 		<h2 id="producth2">Disney Product List</h2>
 
@@ -102,17 +122,27 @@
         <br><br>
 		<div class="returns">
 			<h2>Return Policy</h2>
-			<p>Returns are accepted with original recept and with the items in like new condition. Standard policy is 30 days from date of original purchase.
+			<p>Returns are accepted with original recept and with the items in like new condition. 
+				Standard policy is 30 days from date of original purchase.
                 Used or worn items will not be accepted.</p>
 		</div>
 		<br>
 		<div class="warranty">
 			<h2>Warranty</h2>
-			<p>All products are warrantied for 90 days from original date of purchase. This includes any defects in manufacturing or materials.</p>
-
+			<p>All products are warrantied for 90 days from original date of purchase. 
+				This includes any defects in manufacturing or materials.</p>
 		</div>
-
-
+		<br>
+		<div class="loginform">
+			<h2>Account Login</h2>
+			<form>
+				<label for="username">Username</label><br>
+				<input class="forminputs" type="text" id="uname" name="uname"></br>
+				<label for="password">Password</label><br>
+				<input class="forminputs" type="password" id="pword" name="uname"></br><br>
+				<input class="loginbutton" type="submit" value="Login">
+			</form>
+		</div>
 
 	</body>
 </html> 
