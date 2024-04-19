@@ -1,0 +1,225 @@
+/* styles to handle the sample web store project */
+
+* {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+  }
+
+  a:link {
+  text-decoration: none;
+  color:white;
+}
+
+a:visited {
+  text-decoration: none;
+  color:white;
+}
+
+a:hover {
+  text-decoration: none;
+  font-weight: bolder;
+  color: #fbbe4f;
+}
+
+a:active {
+  text-decoration: underline;
+  color:white;
+
+}
+
+/* Style the header */
+header {
+  background-color: #4a62d8;
+  padding: 5px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  font-size: larger;
+  float: left;
+  width: 15%;
+  /* height: 300px;  only for demonstration, should be removed */
+  background: #76d0c0;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  color: white;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 85%;
+  background-color: #f1f1f1;
+  /* height: 300px;  only for demonstration, should be removed */
+}
+
+/* use these with nav and article tags to size equally... */
+.home {
+  height: 75vh;
+}
+
+.store {
+  height: 160vh;
+}
+
+.about, .register {
+  height: 100vh;
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+div {
+  width:40%;
+  margin: auto;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+div.container {
+	width:90%;
+    display:flex;
+    justify-content:space-between;
+	margin: auto;
+	padding: 20px;
+}
+
+#storeh2 {
+  font-style: italic;
+}
+
+#producth2 {
+  font-style:italic;
+}
+
+table {
+  /* font-family: arial, sans-serif; */
+  border-collapse: collapse;
+  width: 60%;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+h1, h2, form {
+  text-align:center;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  color: #ffffff;
+  background-color: #4a62d8;
+}
+
+tr:nth-child(even) {
+  background-color: #76d0c0;
+}
+
+.returns {
+  background-color: #1ab28a;
+  color:white
+}
+
+.warranty {
+  background-color:#746bab;
+  color:white;
+}
+
+.loginform {
+  background-color:#fbbe4f;
+  width:30%;
+  margin:auto;
+  justify-content: center;
+}
+
+.loginform p {
+	justify-content: center;
+}
+
+.loginform a:hover {
+  text-decoration: none;
+  font-weight: bolder;
+  color: white;
+}
+
+.loginbutton {
+  background-color: #4a62d8;
+  color: white;
+  border-radius:15px;
+
+}
+
+.forminputs {
+  border-radius:5px;
+
+}
+
+.registrationform {
+  background-color:#fbbe4f;
+  width:30%;
+  margin:auto;
+}
+
+.registerbutton {
+  background-color: #4a62d8;
+  color: white;
+  border-radius:15px;
+}
+
+#leftbox {
+  float: left;
+  color:white;
+  background: #746bab;
+  width: 33%;
+  height: 280px;
+}
+
+#middlebox {
+  float: left;
+  color:white;
+  background: #4a62d8;
+  width: 33%;
+  height: 280px;
+}
+
+#rightbox {
+  float: right;
+  color:white;
+  background: #1ab28a;
+  width: 33%;
+  height: 280px;
+}
+
+/* Style the footer */
+footer {
+  background-color: #fbbe4f;
+  padding: 10px;
+  text-align: center;
+  color: black;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}

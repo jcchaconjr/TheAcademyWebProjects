@@ -1,281 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<title>The Disney Store (Template)</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<head>
+		<title>The Disney Store (Template)</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="styles/style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	</head>
 
-<style>
+	<body>
+		<header>
+			<h2 id="storeh2">The Disney Store</h2>
+		</header>
+	
+		<section>
+			<nav class="store">
+				<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="shopping.html">Store</a></li>
+				<li><a href="about.html">About Us</a></li>
+				</ul>
+			</nav>
+			<article class="store">
+				<p style="text-align:center;">
+					<img alt="Shop Disney!" src="https://insidethemagic.net/wp-content/uploads/2021/08/Disney-Store-Shop-Disney.jpg" width="300">
+				</p> 
+				<h2 id="producth2">Disney Product List</h2>
 
-* {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    box-sizing: border-box;
-  }
+				<table>
+				<tr>
+					<th>Product Name</th>
+					<th>Product Price</th>
+					<th>Available Sizes</th>
+				</tr>
+				<tr>
+					<td>Mickey Mouse T-Shirt</td>
+					<td>$21.99</td>
+					<td>Men's XS/S/M/L/XL</td>
+				</tr>
+				<tr>
+					<td>Minnie Mouse Blouse</td>
+					<td>$21.99</td>
+					<td>Women's XS/S/M/L</td>
+				</tr>
+				<tr>
+					<td>Star Wars T-Shirt</td>
+					<td>$24.99</td>
+					<td>Adult XS/S/M/L/XL</td>
+				</tr>
+				<tr>
+					<td>Donald Duck T-Shirt</T-Shirt></td>
+					<td>$18.99</td>
+					<td>Child XS/S/M/L</td>
+				</tr>
+				<tr>
+					<td>Goofy Shorts</td>
+					<td>$29.99</td>
+					<td>Adult XS/S/M/L/XL</td>
+				</tr>
+				<tr>
+					<td>Pluto Dog Dish</td>
+					<td>$16.99</td>
+					<td>One Size</td>
+				</tr>
+				</table>
+				<br><br>
 
-a:link {
-	text-decoration: none;
-	color:white;
-}
+				<div class="returns">
+					<h2>Return Policy</h2>
+					<p>Returns are accepted with original recept and with the items in like new condition. 
+						Standard policy is 30 days from date of original purchase.
+						Used or worn items will not be accepted.</p>
+				</div>
+				<br>
+				<div class="warranty">
+					<h2>Warranty</h2>
+					<p>All products are warrantied for 90 days from original date of purchase. 
+						This includes any defects in manufacturing or materials.</p>
+				</div>
+				<br>
+				<div class="loginform">
+					<h2>Account Login</h2>
+					<form>
+						<label for="username">Username</label><br>
+						<input class="forminputs" type="text" id="uname" name="uname"></br>
+						<label for="password">Password</label><br>
+						<input class="forminputs" type="password" id="pword" name="uname"></br><br>
+						<input class="loginbutton" type="submit" value="Login">
+					</form>
+					<br>
+					<p style="text-align:center;">Don't have an account yet? Register <a href="register.html">HERE</a></p>
+				</div>
+				<br><br>
+			</article>
+		</section>
 
-a:visited {
-  text-decoration: none;
-  color:white;
-}
-
-a:hover {
-  text-decoration: none;
-  font-weight: bolder;
-  color: #fbbe4f;
-}
-
-a:active {
-  text-decoration: underline;
-  color:white;
-
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
- 
-/* Style the header */
-header {
-  background-color: #4a62d8;
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
-  color: white;
-}
- 
-/* Create two columns/boxes that floats next to each other */
-nav {
-  font-size: larger;
-  float: left;
-  width: 15%;
-  /*height: 300px;  only for demonstration, should be removed */
-  height: 150vh;
-  background: #76d0c0;
-  padding: 20px;
-}
- 
-/* Style the list inside the menu */
-nav ul {
-  list-style-type: none;
-  color: white;
-  padding: 0;
-}
- 
-article {
-  float: left;
-  padding: 20px;
-  width: 85%;
-  background-color: #f1f1f1;
-  height: 150vh;
-  /* height: 300px;  only for demonstration, should be removed */
-}
- 
-/* Clear floats after the columns */
-section::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-div {
-	width:40%;
-	margin: auto;
-	padding: 10px;
-	border-radius: 15px;
-}
-
-#storeh2 {
-	font-style: italic;
-}
-
-#producth2 {
-	font-style:italic;
-}
-
-table {
-	/* font-family: arial, sans-serif; */
-	border-collapse: collapse;
-	width: 70%;
-	margin-left:auto;
-	margin-right:auto;
-}
-
-h1, h2, form {
-				text-align:center;
-			}
-
-td, th {
-	border: 1px solid #dddddd;
-	text-align: left;
-	padding: 8px;
-}
-
-th {
-	color: #ffffff;
-	background-color: #4a62d8;
-}
-
-tr:nth-child(even) {
-	background-color: #76d0c0;
-}
-
-.returns {
-	background-color: #1ab28a;
-	color:white
-}
-
-.warranty {
-	background-color:#746bab;
-	color:white;
-}
-
-.loginform {
-	background-color:#fbbe4f;
-	width:30%;
-	margin:auto;
-	justify-content: center;
-}
-
-.loginform p {
-	justify-content: center;
-}
-
-.loginform a:hover {
-  text-decoration: none;
-  font-weight: bolder;
-  color: white;
-}
-
-.loginbutton {
-	background-color: #4a62d8;
-	color: white;
-	border-radius:15px;
-
-}
-
-.forminputs {
-	border-radius:5px;
-
-}
- 
-/* Style the footer */
-footer {
-  background-color: #fbbe4f;
-  padding: 10px;
-  text-align: center;
-  color: black;
-}
- 
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-@media (max-width: 600px) {
-  nav, article {
-    width: 100%;
-    height: auto;
-  }
-}
-</style>
-
-
-</head>
-<body>
-<header>
-	<h2 id="storeh2">The Disney Store</h2>
-</header>
- 
-<section>
-		<nav>
-			<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="shopping.html">Store</a></li>
-			<li><a href="about.html">About Us</a></li>
-			</ul>
-		</nav>
-	<article>
-		<p style="text-align:center;">
-			<img alt="Shop Disney!" src="https://insidethemagic.net/wp-content/uploads/2021/08/Disney-Store-Shop-Disney.jpg" width="300">
-		</p> 
-		<h2 id="producth2">Disney Product List</h2>
-
-		<table>
-		<tr>
-			<th>Product Name</th>
-			<th>Product Price</th>
-			<th>Available Sizes</th>
-		</tr>
-		<tr>
-			<td>Mickey Mouse T-Shirt</td>
-			<td>$21.99</td>
-			<td>Men's XS/S/M/L/XL</td>
-		</tr>
-		<tr>
-			<td>Minnie Mouse Blouse</td>
-			<td>$21.99</td>
-			<td>Women's XS/S/M/L</td>
-		</tr>
-		<tr>
-			<td>Star Wars T-Shirt</td>
-			<td>$24.99</td>
-			<td>Adult XS/S/M/L/XL</td>
-		</tr>
-		<tr>
-			<td>Donald Duck T-Shirt</T-Shirt></td>
-			<td>$18.99</td>
-			<td>Child XS/S/M/L</td>
-		</tr>
-		<tr>
-			<td>Goofy Shorts</td>
-			<td>$29.99</td>
-			<td>Adult XS/S/M/L/XL</td>
-		</tr>
-		<tr>
-			<td>Pluto Dog Dish</td>
-			<td>$16.99</td>
-			<td>One Size</td>
-		</tr>
-		</table>
-		<br><br>
-		<div class="returns">
-			<h2>Return Policy</h2>
-			<p>Returns are accepted with original recept and with the items in like new condition. 
-				Standard policy is 30 days from date of original purchase.
-				Used or worn items will not be accepted.</p>
-		</div>
-		<br>
-		<div class="warranty">
-			<h2>Warranty</h2>
-			<p>All products are warrantied for 90 days from original date of purchase. 
-				This includes any defects in manufacturing or materials.</p>
-		</div>
-		<br>
-		<div class="loginform">
-			<h2>Account Login</h2>
-			<form>
-				<label for="username">Username</label><br>
-				<input class="forminputs" type="text" id="uname" name="uname"></br>
-				<label for="password">Password</label><br>
-				<input class="forminputs" type="password" id="pword" name="uname"></br><br>
-				<input class="loginbutton" type="submit" value="Login">
-			</form>
-			<br>
-			<p style="text-align:center;">Don't have an account yet? Register <a href="register.html">HERE</a></p>
-		</div>
-		<br><br>
-	</article>
-</section>
-
- 
-<footer>
-<p>2024 The Walt Disney Company - ALL RIGHTS RESERVED</p>
-</footer>
- 
-</body>
+		<footer>
+		<p>2024 The Walt Disney Company - ALL RIGHTS RESERVED</p>
+		</footer>
+	</body>
 </html>
