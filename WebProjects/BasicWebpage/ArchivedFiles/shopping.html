@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="UTF-8">
+		<title>Disney Shopping Page</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+		<style>
+
+			* {
+				font-family: "Poppins", sans-serif;
+				font-weight: 400;
+				font-style: normal;
+			}
+			a:link {
+				text-decoration: none;
+			}
+
+			a:hover {
+				color: #ff0000;
+			}
+
+			table {
+			  /* font-family: arial, sans-serif; */
+			  border-collapse: collapse;
+			  width: 60%;
+              margin-left:auto;
+              margin-right:auto;
+			}
+			
+			td, th {
+			  border: 1px solid #dddddd;
+			  text-align: left;
+			  padding: 8px;
+			}
+
+            th {
+                color: #ffffff;
+                background-color: #4a62d8;
+            }
+			
+			tr:nth-child(even) {
+			  background-color: #76d0c0;
+			}
+
+			h1, h2, form {
+				text-align:center;
+			}
+
+			div {
+				width:40%;
+				margin-left: auto;
+				margin-right: auto;
+				padding: 10px;
+                border-radius: 15px;
+			}
+
+			menu {
+				width: 100%;
+				margin-right: auto;
+			}
+
+            .returns {
+                background-color: #1ab28a;
+                color:white
+            }
+
+            .warranty {
+                background-color:#746bab;
+                color:white;
+            }
+
+			.loginform {
+				background-color:#fbbe4f;
+				width:25%;
+				margin:auto;
+			}
+
+			.loginbutton {
+				background-color: #4a62d8;
+				color: white;
+				border-radius:15px;
+
+			}
+
+			.forminputs {
+				border-radius:5px;
+
+			}
+
+            #storeh2 {
+                font-style: italic;
+            }
+
+            #producth2 {
+                font-style:italic;
+            }
+		</style>
+	</head>
+	<body>
+		<nav>
+			<div class="menu">
+				<img alt="Shop Disney!" src="https://insidethemagic.net/wp-content/uploads/2021/08/Disney-Store-Shop-Disney.jpg" width="150">
+				<a href="index.html">Home</a> | <a href="shopping.html">Shop</a> | <a href="register.html">Register</a>
+			</div>
+		 </nav>
+        <h1 id="storeh2">Welcome to the Disney Store!</h1>
+		 <br>
+		<h2 id="producth2">Disney Product List</h2>
+
+		<table>
+		<tr>
+			<th>Product Name</th>
+			<th>Product Price</th>
+			<th>Available Sizes</th>
+		</tr>
+		<tr>
+			<td>Mickey Mouse T-Shirt</td>
+			<td>$21.99</td>
+			<td>Men's XS/S/M/L/XL</td>
+		</tr>
+		<tr>
+			<td>Minnie Mouse Blouse</td>
+			<td>$21.99</td>
+			<td>Women's XS/S/M/L</td>
+		</tr>
+		<tr>
+			<td>Star Wars T-Shirt</td>
+			<td>$24.99</td>
+			<td>Adult XS/S/M/L/XL</td>
+		</tr>
+		<tr>
+			<td>Donald Duck T-Shirt</T-Shirt></td>
+			<td>$18.99</td>
+			<td>Child XS/S/M/L</td>
+		</tr>
+		<tr>
+			<td>Goofy Shorts</td>
+			<td>$29.99</td>
+			<td>Adult XS/S/M/L/XL</td>
+		</tr>
+		<tr>
+			<td>Pluto Dog Dish</td>
+			<td>$16.99</td>
+			<td>One Size</td>
+		</tr>
+		</table>
+        <br><br>
+		<div class="returns">
+			<h2>Return Policy</h2>
+			<p>Returns are accepted with original recept and with the items in like new condition. 
+				Standard policy is 30 days from date of original purchase.
+                Used or worn items will not be accepted.</p>
+		</div>
+		<br>
+		<div class="warranty">
+			<h2>Warranty</h2>
+			<p>All products are warrantied for 90 days from original date of purchase. 
+				This includes any defects in manufacturing or materials.</p>
+		</div>
+		<br>
+		<div class="loginform">
+			<h2>Account Login</h2>
+			<form>
+				<label for="username">Username</label><br>
+				<input class="forminputs" type="text" id="uname" name="uname"></br>
+				<label for="password">Password</label><br>
+				<input class="forminputs" type="password" id="pword" name="uname"></br><br>
+				<input class="loginbutton" type="submit" value="Login">
+			</form>
+			<br>
+			<p>Don't have an account yet? Register <a href="register.html">HERE</a></p>
+		</div>
+	</body>
+</html> 

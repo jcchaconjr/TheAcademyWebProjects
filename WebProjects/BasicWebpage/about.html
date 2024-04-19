@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>The Disney Store - Create Account</title>
+<title>The Disney Store (Template)</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,7 +58,7 @@ nav {
   float: left;
   width: 15%;
   /*height: 300px;  only for demonstration, should be removed */
-  height: 150vh;
+  height: 100vh;
   background: #76d0c0;
   padding: 20px;
 }
@@ -75,7 +75,7 @@ article {
   padding: 20px;
   width: 85%;
   background-color: #f1f1f1;
-  height: 150vh;
+  height: 100vh;
   /* height: 300px;  only for demonstration, should be removed */
 }
  
@@ -91,6 +91,14 @@ div {
 	margin: auto;
 	padding: 10px;
 	border-radius: 15px;
+}
+
+div.container {
+	width:90%;
+    display:flex;
+    justify-content:space-between;
+	margin: auto;
+	padding: 20px;
 }
 
 #storeh2 {
@@ -167,18 +175,28 @@ tr:nth-child(even) {
 
 }
 
-.registrationform {
-    background-color:#fbbe4f;
-    width:30%;
-    margin:auto;
+#leftbox {
+    float: left;
+    color:white;
+    background: #746bab;
+    width: 33%;
+    height: 280px;
+}
+ 
+#middlebox {
+    float: left;
+    color:white;
+    background: #4a62d8;
+    width: 33%;
+    height: 280px;
 }
 
-.registerbutton {
-    background-color: #4a62d8;
-    color: white;
-    border-radius:15px;
-
-
+#rightbox {
+    float: right;
+    color:white;
+    background: #1ab28a;
+    width: 33%;
+    height: 280px;
 }
  
 /* Style the footer */
@@ -198,7 +216,6 @@ footer {
 }
 </style>
 
-
 </head>
 <body>
 <header>
@@ -214,26 +231,30 @@ footer {
 			</ul>
 		</nav>
 	<article>
-		<h1 id="storeh2">Create your Disney Shop Account</h1>
-        <p style="text-align:center;">
-            <img alt="Shop Disney!" src="https://insidethemagic.net/wp-content/uploads/2021/08/Disney-Store-Shop-Disney.jpg" width="300">
+		<p style="text-align:center;">
+			<img alt="Shop Disney!" src="https://insidethemagic.net/wp-content/uploads/2021/08/Disney-Store-Shop-Disney.jpg" width="300">
+		</p> 
+		<h2 id="producth2">About Disney Store</h2>
+        <p style="text-align:center;">Welcome to a home full of enchanted moments for every fan. A place there the journey back trhough your favorite stories is just as special
+            as what you find along the way. Discover the Disney difference!
         </p>
-        <br>
-        <br>
-        <div class="registrationform">
-			<h2>Create your Account</h2>
-			<form>
-				<label for="fname">First Name</label><br>
-				<input class="forminputs" type="text" id="fname" name="fname"><br>
-				<label for="lname">Last Name</label><br>
-				<input class="forminputs" type="text" id="lname" name="lname"><br>
-                <label for="lname">Username</label><br>
-				<input class="forminputs" type="text" id="uname" name="uname"><br>
-                <label for="pword">Password</label><br>
-				<input class="forminputs" type="password" id="pword" name="pword"><br><br>
-				<input class="registerbutton" type="submit" value="Create Account">
-			</form>
-		</div>
+        <div class="container">
+            <div id="leftbox">
+                <h1 style="text-align:center;">Authentic</h1>
+                <p style="text-align:center;">We are the official home of genuine Disney merchandise for fans of all ages. 
+                    We connect more Guests to more of the characters they love than anywhere else.</p>
+            </div>
+            <div id="middlebox">
+                <h1 style="text-align:center;">Quality</h1>
+                <p style="text-align:center;">Every product is thoughtfully designed and brought to life with the highest quality materials
+                    for Magic that lasts.</p>
+            </div>
+            <div id="rightbox">
+                <h1 style="text-align:center;">Unique</h1>
+                <p style="text-align:center;">We offer uniquely imagined, special edition products and collections you won’t find anywhere else.</p>
+            </div>
+        </div>
+
 	</article>
 </section>
 
