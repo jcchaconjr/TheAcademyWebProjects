@@ -83,19 +83,109 @@ section::after {
   clear: both;
 }
 
-div {
-  width:40%;
-  margin: auto;
-  padding: 10px;
+.container {
+  width:90%;
+  display:flex;
+  justify-content:space-between;
+	margin: auto;
+	padding: 20px;
+ 
+}
+
+.aboutcontainer {
+  width: 100%;
+  margin: 0px;
+  padding: 20px;
+	display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  height: 350px;
+  width: 350px;
+  margin: 20px;
+  overflow: hidden;
   border-radius: 15px;
 }
 
-div.container {
-	width:90%;
-    display:flex;
-    justify-content:space-between;
-	margin: auto;
-	padding: 20px;
+card:hover {
+  cursor: pointer;
+}
+
+.card:hover .leftintro {
+  height: 220px;
+  bottom: 30px;
+  background: #746bab;
+}
+
+.card:hover .centerintro {
+  height: 220px;
+  bottom: 30px;
+  background: #4a62d8;
+}
+
+.card:hover .rightintro {
+  height: 220px;
+  bottom: 30px;
+  background: #1ab28a;
+}
+
+.card:hover .cardtext {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.cardheader {
+  margin: 10px;
+  font-size: 32px;
+}
+
+.cardtext {
+  font-size: 16px;
+  margin: 10px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.leftintro {
+  height: 70px;
+  width: 350px;
+  padding: 6px;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 30px;
+  background: rgb(116, 107, 171, .5);
+  color: white;
+  transition: .5s;
+}
+
+.centerintro {
+  height: 70px;
+  width: 350px;
+  padding: 6px;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 30px;
+  background: rgb(74, 98, 216, .5);
+  color: white;
+  transition: .5s;
+}
+
+.rightintro {
+  height: 70px;
+  width: 350px;
+  padding: 6px;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 30px;
+  background: rgb(26, 178, 138, .5);
+  color: white;
+  transition: .5s;
 }
 
 #storeh2 {
@@ -135,12 +225,20 @@ tr:nth-child(even) {
 
 .returns {
   background-color: #1ab28a;
-  color:white
+  color:white;
+  width:40%;
+  margin: auto;
+  padding: 10px;
+  border-radius: 15px;
 }
 
 .warranty {
   background-color:#746bab;
   color:white;
+  width:40%;
+  margin: auto;
+  padding: 10px;
+  border-radius: 15px;
 }
 
 .loginform {
@@ -148,13 +246,15 @@ tr:nth-child(even) {
   width:30%;
   margin:auto;
   justify-content: center;
+  padding: 10px;
+  border-radius: 15px;
 }
 
 .loginform p {
 	justify-content: center;
 }
 
-.loginform a:hover {
+.loginform a:hover, .registrationform a:hover {
   text-decoration: none;
   font-weight: bolder;
   color: white;
@@ -176,12 +276,19 @@ tr:nth-child(even) {
   background-color:#fbbe4f;
   width:30%;
   margin:auto;
+  padding: 10px;
+  border-radius: 15px;
 }
 
 .registerbutton {
   background-color: #4a62d8;
   color: white;
   border-radius:15px;
+}
+
+.aboutimages {
+  height: 350px;
+  transition: .5s;
 }
 
 #leftbox {
