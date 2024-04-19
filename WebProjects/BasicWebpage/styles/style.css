@@ -5,6 +5,8 @@
     font-weight: 400;
     font-style: normal;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
 
   a:link {
@@ -57,6 +59,7 @@ nav ul {
 
 article {
   float: left;
+  align-items: center;
   padding: 20px;
   width: 85%;
   background-color: #f1f1f1;
@@ -65,16 +68,20 @@ article {
 
 /* use these with nav and article tags to size equally... */
 .home {
-  height: 75vh;
+  height: 87vh;
 }
 
 .store {
   height: 160vh;
 }
 
-.about, .register {
+.register {
   height: 100vh;
 }
+
+.about {
+  height: 100vh;
+} 
 
 /* Clear floats after the columns */
 section::after {
@@ -94,11 +101,33 @@ section::after {
 
 .aboutcontainer {
   width: 100%;
-  margin: 0px;
+  margin: 0px;  
   padding: 20px;
 	display:flex;
   justify-content: center;
-  align-items: center;
+   align-items: center;
+}
+
+.homecontainer {
+  position: relative;
+}
+
+.homepromoheader {
+  position: absolute;
+  font-size:36px;
+  top: 35%;
+  left: 2%;
+  width: 50%;
+  color: white;
+}
+
+.homepromo {
+  position: absolute;
+  font-size:16px;
+  top: 60%;
+  left: 2%;
+  width: 30%;
+  color: white;
 }
 
 .card {
@@ -256,6 +285,16 @@ tr:nth-child(even) {
 
 .loginform a:hover, .registrationform a:hover {
   text-decoration: none;
+  font-weight: bolder;
+  color: white;
+}
+
+.homepromo a:link {
+  text-decoration: underline;
+}
+
+.homepromo a:hover {
+  text-decoration: underline;
   font-weight: bolder;
   color: white;
 }
