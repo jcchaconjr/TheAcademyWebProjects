@@ -66,7 +66,7 @@ article {
   /* height: 300px;  only for demonstration, should be removed */
 }
 
-/* use these with nav and article tags to size equally... */
+/* use these with nav and article tags to size equally on each page... */
 .home {
   height: 87vh;
 }
@@ -80,7 +80,7 @@ article {
 }
 
 .about {
-  height: 100vh;
+  height: 120vh;
 } 
 
 /* Clear floats after the columns */
@@ -105,9 +105,10 @@ section::after {
   padding: 20px;
 	display:flex;
   justify-content: center;
-   align-items: center;
+  align-items: center;
 }
 
+/* === These container classes for the home page allows for overlayed text on the banner === */
 .homecontainer {
   position: relative;
 }
@@ -130,10 +131,12 @@ section::after {
   color: white;
 }
 
+/* === All effects for the About page cards... === */
+
 .card {
   height: 350px;
-  width: 350px;
-  margin: 20px;
+  width: 300px;
+  margin: 30px;
   overflow: hidden;
   border-radius: 15px;
 }
@@ -143,20 +146,20 @@ card:hover {
 }
 
 .card:hover .leftintro {
-  height: 220px;
-  bottom: 30px;
+  height: 230px;
+  bottom: 20px;
   background: #746bab;
 }
 
 .card:hover .centerintro {
-  height: 220px;
-  bottom: 30px;
+  height: 230px;
+  bottom: 20px;
   background: #4a62d8;
 }
 
 .card:hover .rightintro {
-  height: 220px;
-  bottom: 30px;
+  height: 230px;
+  bottom: 20px;
   background: #1ab28a;
 }
 
@@ -170,7 +173,7 @@ card:hover {
 }
 
 .cardheader {
-  margin: 10px;
+  margin: 5px;
   font-size: 32px;
 }
 
@@ -179,50 +182,76 @@ card:hover {
   margin: 10px;
   visibility: hidden;
   opacity: 0;
+  color:#f1f1f1;
 }
 
 .leftintro {
   height: 70px;
-  width: 350px;
+  width: 300px;
   padding: 6px;
   box-sizing: border-box;
   position: absolute;
-  bottom: 30px;
-  background: rgb(116, 107, 171, .5);
+  bottom: 10px;
+  background: rgba(116, 107, 171, .5);
   color: white;
   transition: .5s;
 }
 
 .centerintro {
   height: 70px;
-  width: 350px;
+  width: 300px;
   padding: 6px;
   box-sizing: border-box;
   position: absolute;
-  bottom: 30px;
-  background: rgb(74, 98, 216, .5);
+  bottom: 10px;
+  background: rgba(74, 98, 216, .5);
   color: white;
   transition: .5s;
 }
 
 .rightintro {
   height: 70px;
-  width: 350px;
+  width: 300px;
   padding: 6px;
   box-sizing: border-box;
   position: absolute;
-  bottom: 30px;
-  background: rgb(26, 178, 138, .5);
+  bottom: 10px;
+  background: rgba(26, 178, 138, .5);
   color: white;
   transition: .5s;
 }
 
-#storeh2 {
-  font-style: italic;
+.aboutimages {
+  height: 350px;
+  transition: .5s;
 }
 
-#producth2 {
-  font-style:italic;
+#leftbox {
+  float: left;
+  color:white;
+  background: #746bab;
+  width: 33%;
+  height: 280px;
+}
+
+#middlebox {
+  float: left;
+  color:white;
+  background: #4a62d8;
+  width: 33%;
+  height: 280px;
+}
+
+#rightbox {
+  float: right;
+  color:white;
+  background: #1ab28a;
+  width: 33%;
+  height: 280px;
+}
+
+#storeh2, #producth2 {
+  font-style: italic;
 }
 
 table {
@@ -329,34 +358,7 @@ tr:nth-child(even) {
   height: 30px;
 }
 
-.aboutimages {
-  height: 350px;
-  transition: .5s;
-}
 
-#leftbox {
-  float: left;
-  color:white;
-  background: #746bab;
-  width: 33%;
-  height: 280px;
-}
-
-#middlebox {
-  float: left;
-  color:white;
-  background: #4a62d8;
-  width: 33%;
-  height: 280px;
-}
-
-#rightbox {
-  float: right;
-  color:white;
-  background: #1ab28a;
-  width: 33%;
-  height: 280px;
-}
 
 /* Style the footer */
 footer {
