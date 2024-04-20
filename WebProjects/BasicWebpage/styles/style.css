@@ -31,13 +31,29 @@ a:active {
 
 }
 
+/* === The following is used to animate the social icons === */
+
+.anchor-item:hover {
+  animation-name: bounceup;
+  animation-duration: .2s;
+  transform: translateY(-2px);
+}
+
+@keyframes bounceup {
+  from {
+      transform: translateY(0);
+  }
+
+  to {
+      transform: translateY(-2px);
+  }
+}
+
 /* Style the header */
 header {
   background-color: #4a62d8;
   padding: 5px;
   text-align: center;
-  font-size: 35px;
-  color: white;
 }
 
 /* Create two columns/boxes that floats next to each other */
@@ -250,10 +266,6 @@ card:hover {
   height: 280px;
 }
 
-#storeh2, #producth2 {
-  font-style: italic;
-}
-
 table {
   /* font-family: arial, sans-serif; */
   border-collapse: collapse;
@@ -262,7 +274,7 @@ table {
   margin-right:auto;
 }
 
-h1, h2, form {
+h1, h2, h3, form {
   text-align:center;
 }
 
