@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+
+.card {
+  height: 350px;
+  width: 350px;
+  overflow: hidden;
+  border-radius: 50px;
+}
+
+.aboutimages {
+  height: 350px;
+  transition: .3s;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+#rcorners1 {
+  border-radius: 15px 50px 30px 5px;
+  background: #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px; 
+}
+
+#rcorners2 {
+  border-radius: 15px 50px 30px;
+  background: #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px; 
+}
+
+#rcorners3 {
+  border-radius: 15px 50px;
+  background: #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px; 
+} 
+
+#rcorners4 {
+  border-radius: 15px;
+  background: #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px; 
+} 
+</style>
+</head>
+<body>
+
+<h1>The border-radius Property</h1>
+
+<p>Two values - border-radius: 15px 50px:</p>
+<p id="rcorners3"></p>
+
+<p>Image in a card - border-radius: 50px all around... Hover for more!!!</p>
+<div class="card">
+  <img class="aboutimages" src="lightsaber.png" alt="A man weilding his light saber">
+</div>
+
+<p>Four values - border-radius: 15px 50px 30px 5px;</p>
+<p id="rcorners1"></p>
+
+</body>
+</html>
+
+

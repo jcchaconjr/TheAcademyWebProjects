@@ -152,6 +152,16 @@ section::after {
   color: white;
 }
 
+.shoplink {
+
+position: absolute;
+font-size: 16px;
+top: 85%;
+left: 2%;
+width: 30%;
+color: white;
+}
+
 /* === All effects for the About page cards... === */
 
 .card {
@@ -195,8 +205,10 @@ card:hover {
 }
 
 .cardheader {
+  position: relative;
   margin: 5px;
   font-size: 32px;
+  overflow: hidden;
 }
 
 .cardtext {
@@ -303,7 +315,7 @@ tr:nth-child(even) {
 .returns {
   background-color: #1ab28a;
   color:white;
-  width:40%;
+  width:500px;
   margin: auto;
   padding: 10px;
   border-radius: 15px;
@@ -312,7 +324,7 @@ tr:nth-child(even) {
 .warranty {
   background-color:#746bab;
   color:white;
-  width:40%;
+  width:500px;
   margin: auto;
   padding: 10px;
   border-radius: 15px;
@@ -320,7 +332,7 @@ tr:nth-child(even) {
 
 .loginform {
   background-color:#fbbe4f;
-  width:30%;
+  width: 425px;
   margin:auto;
   justify-content: center;
   padding: 10px;
@@ -337,11 +349,11 @@ tr:nth-child(even) {
   color: white;
 }
 
-.homepromo a:link {
+.shoplink a:link {
   text-decoration: underline;
 }
 
-.homepromo a:hover {
+.shoplink a:hover {
   text-decoration: underline;
   font-weight: bolder;
   color: white;
@@ -363,7 +375,7 @@ tr:nth-child(even) {
 
 .registrationform {
   background-color:#fbbe4f;
-  width:30%;
+  width:350px;
   margin:auto;
   padding: 10px;
   border-radius: 15px;
@@ -388,9 +400,38 @@ footer {
 }
 
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-@media (max-width: 600px) {
+@media (max-width: 840px) {
   nav, article {
     width: 100%;
-    height: auto;
+  }
+  nav.home, nav.store, nav.register, nav.about {
+    height: 20vh;
+  }
+  article {
+    height: 220vh;
+  }
+
+  table, .returns, .warranty, .loginform {
+    width: 350px;
+  }
+}
+
+@media (max-width: 600px) {
+  article {
+    height: 210vh;
+  }
+}
+
+@media (max-width: 1150px) {
+
+  .homepromo {display: none;}
+  .homepromo.a {display: flex;}
+  .homepromoheader {
+    font-size:24px;
+    top: 20%;
+    width: 40%;
+  }
+  .shoplink {
+    top: 75%;
   }
 }
