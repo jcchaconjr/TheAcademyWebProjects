@@ -8,6 +8,7 @@
   --purple: #4a62d8;
   --almost-black: #1f1f1f;
   --aquamarine: #76d0c0;
+  --dark-aquamarine: #1ab28a;
   --violet: #746bab;
   --translucent-violet: rgba(116, 107, 171, .5);
   --translucent-purple: rgba(74, 98, 216, .5);
@@ -217,7 +218,7 @@ card:hover {
 .card:hover .rightintro {
   height: 230px;
   bottom: 20px;
-  background: var(--aquamarine);
+  background: var(--dark-aquamarine);
 }
 
 .card:hover .cardtext {
@@ -306,7 +307,7 @@ card:hover {
 #rightbox {
   float: right;
   color:var(--white);
-  background: var(--aquamarine);
+  background: var(--dark-aquamarine);
   width: 33%;
   height: 280px;
 }
