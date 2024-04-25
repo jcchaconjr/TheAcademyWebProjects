@@ -107,7 +107,7 @@ article {
 
 /* use these with nav and article tags to size equally on each page... */
 .home {
-  height: 87vh;
+  height: 3000px;
 }
 
 .homecolumns {
@@ -205,19 +205,19 @@ card:hover {
 
 .card:hover .leftintro {
   height: 230px;
-  bottom: 20px;
+  bottom: 5px;
   background: var(--violet);
 }
 
 .card:hover .centerintro {
   height: 230px;
-  bottom: 20px;
+  bottom: 5px;
   background: var(--purple);
 }
 
 .card:hover .rightintro {
   height: 230px;
-  bottom: 20px;
+  bottom: 5px;
   background: var(--dark-aquamarine);
 }
 
@@ -284,6 +284,7 @@ card:hover {
 }
 
 .aboutimages {
+  position: relative;
   height: 350px;
   transition: .5s;
 }
@@ -291,6 +292,7 @@ card:hover {
 #leftbox {
   float: left;
   color:white;
+  bottom: 5%;
   background: var(--violet);
   width: 33%;
   height: 280px;
@@ -299,6 +301,7 @@ card:hover {
 #middlebox {
   float: left;
   color:white;
+  bottom: 5%;
   background: var(--purple);
   width: 33%;
   height: 280px;
@@ -307,6 +310,7 @@ card:hover {
 #rightbox {
   float: right;
   color:var(--white);
+  bottom: 5%;
   background: var(--dark-aquamarine);
   width: 33%;
   height: 280px;
@@ -426,36 +430,64 @@ footer {
   color: black;
 }
 
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-@media (max-width: 840px) {
-  nav, article {
-    width: 100%;
-  }
-  nav.home, nav.store, nav.register, nav.about {
-    height: 20vh;
-  }
-  article {
-    height: 220vh;
-  }
-
-  table, .returns, .warranty, .loginform {
-    width: 350px;
-  }
-
-  .homecolumns {
-    column-width: 200px;
-  }
-
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
 }
 
-@media (max-width: 600px) {
-  article {
-    height: 210vh;
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column.img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+
+@media(max-width: 1364px) {
+
+  article.about, nav.about {
+    min-height: 1500px;
+  }
+
+  .leftintro, .centerintro {
+    bottom: 85px;
+  }
+
+  .card:hover .leftintro, .card:hover .centerintro {
+    bottom: 80px;
+  }
+  
+  .rightintro {
+    bottom: -325px;
+  }
+
+  .card:hover .rightintro {
+    bottom: -330px;
+  }
+
+  .rightintro {
+    bottom: -325px;
+  }
+
+  .card:hover .rightintro {
+    bottom: -330px;
   }
 }
 
 @media (max-width: 1150px) {
 
+  nav.home, article.home {
+    min-height: 4800px;
+  }
   .homepromo {display: none;}
   .homepromo.a {display: flex;}
   .homepromoheader {
@@ -472,3 +504,123 @@ footer {
     column-gap: 40px;
   }
 }
+
+@media(max-width: 950px) {
+
+  nav.home, article.home {
+    min-height: 4800px;
+  }
+  article.about, nav.about {
+    min-height: 1850px;
+  }
+
+  .leftintro {
+    bottom: 85px;
+  }
+
+  .centerintro {
+    bottom: -315px;
+  }
+
+  .card:hover .leftintro {
+    bottom: 80px;
+  }
+
+  .card:hover .centerintro {
+    bottom: -310px;
+  }
+  
+  .rightintro {
+    bottom: -725px;
+  }
+
+  .card:hover .rightintro {
+    bottom: -720px;
+  }
+
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+
+}
+
+
+
+@media (max-width: 840px) {
+   nav, article {
+    width: 100%;
+  }
+
+  nav.home, nav.shop, nav.register, nav.about {
+    max-height: 200px;
+  }
+
+  article.home {
+    height: 2200px;
+  }
+
+  table, .returns, .warranty, .loginform {
+    width: 350px;
+  }
+
+  .homecolumns {
+    column-width: 200px;
+  }
+
+}
+
+@media(max-width: 603px) {
+
+  nav, article {
+    width: 100%;
+  }
+
+  nav.home, nav.shop, nav.register, nav.about {
+    max-height: 200px;
+  }
+
+  article.about {
+    min-height: 1900px;
+  }
+
+  .leftintro, .centerintro {
+    bottom: 80px;
+  }
+
+  .card:hover .leftintro, .card:hover .centerintro {
+    bottom: 75px;
+  }
+  
+  .rightintro {
+    bottom: -325px;
+  }
+
+  .card:hover .rightintro {
+    bottom: -400px;
+  }
+
+  .rightintro {
+    bottom: -325px;
+  }
+
+  .card:hover .rightintro {
+    bottom: -330px;
+  }
+
+  
+}
+
+@media (max-width: 600px) {
+
+
+  article {
+    height: 210vh;
+  }
+
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
