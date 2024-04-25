@@ -39,12 +39,13 @@ a:active {
 }
 
 .anchor-item:hover {
-  animation-name: bounceup;
-  animation-duration: .2s;
+  /* animation-name: bounceup;
+  animation-duration: .2s; */
   transform: translateY(-2px);
+  transition: .2s;
 }
 
-@keyframes bounceup {
+/* @keyframes bounceup {
   from {
       transform: translateY(0);
   }
@@ -52,7 +53,7 @@ a:active {
   to {
       transform: translateY(-2px);
   }
-}
+} */
 
 /* Style the header */
 header {
@@ -90,6 +91,14 @@ article {
 /* use these with nav and article tags to size equally on each page... */
 .home {
   height: 87vh;
+}
+
+.homecolumns {
+  column-count: 3;
+  column-gap: 50px;
+  column-rule-style: solid;
+  column-rule-width: 1px;
+  column-rule-color: #1f1f1f;
 }
 
 .store {
@@ -414,6 +423,11 @@ footer {
   table, .returns, .warranty, .loginform {
     width: 350px;
   }
+
+  .homecolumns {
+    column-width: 200px;
+  }
+
 }
 
 @media (max-width: 600px) {
@@ -433,5 +447,10 @@ footer {
   }
   .shoplink {
     top: 75%;
+  }
+
+  .homecolumns {
+    column-count: 2;
+    column-gap: 40px;
   }
 }
