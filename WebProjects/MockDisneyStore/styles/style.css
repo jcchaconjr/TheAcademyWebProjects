@@ -93,6 +93,13 @@ a:active {
 
 }
 
+.elegant {
+  font-family: "Alex Brush", cursive;
+  font-size: 60px;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* === The following is used to animate the social icons === */
 
 .anchor-item {
@@ -182,7 +189,7 @@ color: var(--white);
   justify-content: center;
   align-items: flex-start;
   height: 350px;
-  width: 300px;
+  width: 350px;
   border-radius: 15px;
   margin: 30px;
   overflow: hidden;
@@ -193,7 +200,7 @@ card:hover {
 }
 
 .card:hover .intro {
-  height: 230px;
+  height: 205px;
   bottom: 0px;
   background: var(--hoverclr);
 }
@@ -225,7 +232,7 @@ card:hover {
 }
 
 .intro {
-  height: 70px;
+  height: 65px;
   width: inherit;
   padding: 6px;
   box-sizing: border-box;
