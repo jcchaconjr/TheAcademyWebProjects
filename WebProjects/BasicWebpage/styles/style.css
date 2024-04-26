@@ -454,7 +454,7 @@ footer {
 
 @media(max-width: 1364px) {
 
-  article.about, nav.about {
+  article.about {
     min-height: 1500px;
   }
 
@@ -485,9 +485,10 @@ footer {
 
 @media (max-width: 1150px) {
 
-  nav.home, article.home {
+  article {
     min-height: 4800px;
   }
+
   .homepromo {display: none;}
   .homepromo.a {display: flex;}
   .homepromoheader {
@@ -507,35 +508,38 @@ footer {
 
 @media(max-width: 950px) {
 
-  nav.home, article.home {
-    min-height: 4800px;
+  nav.home, nav.store, nav.register, nav.about {
+    width: 100%;
+    height: auto;
   }
-  article.about, nav.about {
-    min-height: 1850px;
+
+  article {
+    align-items: center;
+    min-height: 4500px;
   }
 
   .leftintro {
-    bottom: 85px;
-  }
-
-  .centerintro {
-    bottom: -315px;
+    bottom: -75px;
   }
 
   .card:hover .leftintro {
-    bottom: 80px;
+    bottom: -80px;
+  }
+
+  .centerintro {
+    bottom: -470px;
   }
 
   .card:hover .centerintro {
-    bottom: -310px;
+    bottom: -475px;
   }
   
   .rightintro {
-    bottom: -725px;
+    bottom: -875px;
   }
 
   .card:hover .rightintro {
-    bottom: -720px;
+    bottom: -880px;
   }
 
   .column {
@@ -548,13 +552,6 @@ footer {
 
 
 @media (max-width: 840px) {
-   nav, article {
-    width: 100%;
-  }
-
-  nav.home, nav.shop, nav.register, nav.about {
-    max-height: 200px;
-  }
 
   article.home {
     height: 2200px;
@@ -572,50 +569,22 @@ footer {
 
 @media(max-width: 603px) {
 
-  nav, article {
-    width: 100%;
-  }
-
-  nav.home, nav.shop, nav.register, nav.about {
-    max-height: 200px;
-  }
-
-  article.about {
+/*   article.about {
     min-height: 1900px;
-  }
-
-  .leftintro, .centerintro {
-    bottom: 80px;
-  }
-
-  .card:hover .leftintro, .card:hover .centerintro {
-    bottom: 75px;
-  }
-  
-  .rightintro {
-    bottom: -325px;
-  }
-
-  .card:hover .rightintro {
-    bottom: -400px;
-  }
-
-  .rightintro {
-    bottom: -325px;
-  }
-
-  .card:hover .rightintro {
-    bottom: -330px;
-  }
-
+  } */
   
 }
 
 @media (max-width: 600px) {
 
 
-  article {
+/*   article {
     height: 210vh;
+  } */
+
+  .card .leftintro .centerintro .rightintro {
+
+    width: inherit;
   }
 
   .column {
@@ -623,4 +592,3 @@ footer {
     max-width: 100%;
   }
 }
-
