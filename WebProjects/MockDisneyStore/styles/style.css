@@ -26,6 +26,10 @@
     padding: 0;
   }
 
+  body {
+    height: fit-content;
+  }
+
   a:link {
   text-decoration: none;
   color: var(--white);
@@ -62,16 +66,6 @@ a:active {
   transition: .2s;
 }
 
-/* @keyframes bounceup {
-  from {
-      transform: translateY(0);
-  }
-
-  to {
-      transform: translateY(-2px);
-  }
-} */
-
 /* Style the header */
 header {
   background-color: var(--purple);
@@ -84,7 +78,7 @@ nav {
   font-size: larger;
   float: left;
   width: 15%;
-  /* height: 300px;  only for demonstration, should be removed */
+  height: fit-content;
   background: var(--aquamarine);
   padding: 20px;
 }
@@ -98,17 +92,18 @@ nav ul {
 
 article {
   float: left;
+  justify-content: center;
   align-items: center;
   padding: 20px;
   width: 85%;
-  background-color: #var(var(--light-white));
-  /* height: 300px;  only for demonstration, should be removed */
+  height: fit-content;
+  background-color: (var(--light-white));
 }
 
 /* use these with nav and article tags to size equally on each page... */
-.home {
+/* .home {
   height: 3000px;
-}
+} */
 
 .homecolumns {
   column-count: 3;
@@ -118,7 +113,7 @@ article {
   column-rule-color: var(--almost-black);
 }
 
- .store {
+/*  .store {
   height: 160vh;
 }
 
@@ -128,7 +123,8 @@ article {
 
 .about {
   height: 120vh;
-} 
+}  
+*/
 
 /* Clear floats after the columns */
 section::after {
@@ -144,16 +140,6 @@ section::after {
 	margin: auto;
 	padding: 20px;
  
-}
-
-.aboutcontainer {
-  width: 100%;
-  margin: 0px;  
-  padding: 20px;
-	display:flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
 }
 
 /* === These container classes for the home page allows for overlayed text on the banner === */
@@ -191,34 +177,36 @@ color: var(--white);
 
 /* === All effects for the About page cards... === */
 
-.card {
+.aboutcontainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 100px 50px;
+  padding: 100px 20px;
+}
+
+.aboutcontainer .card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   height: 350px;
   width: 300px;
+  border-radius: 15px;
   margin: 30px;
   overflow: hidden;
-  border-radius: 15px;
 }
 
 card:hover {
   cursor: pointer;
 }
 
-.card:hover .leftintro {
+.card:hover .intro {
   height: 230px;
-  bottom: 5px;
-  background: var(--violet);
-}
-
-.card:hover .centerintro {
-  height: 230px;
-  bottom: 5px;
-  background: var(--purple);
-}
-
-.card:hover .rightintro {
-  height: 230px;
-  bottom: 5px;
-  background: var(--dark-aquamarine);
+  bottom: 0px;
+  background: var(--hoverclr);
 }
 
 .card:hover .cardtext {
@@ -231,14 +219,14 @@ card:hover {
   transform: scale(1.1);
 }
 
-.cardheader {
+.intro .cardheader {
   position: relative;
   margin: 5px;
   font-size: 32px;
   overflow: hidden;
 }
 
-.cardtext {
+.intro .cardtext {
   font-size: 16px;
   margin: 10px;
   visibility: hidden;
@@ -247,38 +235,14 @@ card:hover {
   transition: .5s;
 }
 
-.leftintro {
+.intro {
   height: 70px;
   width: inherit;
   padding: 6px;
   box-sizing: border-box;
   position: absolute;
-  bottom: 10px;
-  background: var(--translucent-violet);
-  color: white;
-  transition: .5s;
-}
-
-.centerintro {
-  height: 70px;
-  width: inherit;
-  padding: 6px;
-  box-sizing: border-box;
-  position: absolute;
-  bottom: 10px;
-  background: var(--translucent-purple);
-  color: white;
-  transition: .5s;
-}
-
-.rightintro {
-  height: 70px;
-  width: inherit;
-  padding: 6px;
-  box-sizing: border-box;
-  position: absolute;
-  bottom: 10px;
-  background: var(--translucent-aquamarine);
+  bottom: 20px;
+  background: var(--clr);
   color: white;
   transition: .5s;
 }
@@ -454,40 +418,16 @@ footer {
 
 @media(max-width: 1364px) {
 
-  article.about {
+  /* article.about {
     min-height: 1500px;
-  }
-
-  .leftintro, .centerintro {
-    bottom: 85px;
-  }
-
-  .card:hover .leftintro, .card:hover .centerintro {
-    bottom: 80px;
-  }
-  
-  .rightintro {
-    bottom: -325px;
-  }
-
-  .card:hover .rightintro {
-    bottom: -330px;
-  }
-
-  .rightintro {
-    bottom: -325px;
-  }
-
-  .card:hover .rightintro {
-    bottom: -330px;
-  }
+  } */
 }
 
 @media (max-width: 1150px) {
 
-  article {
+  /* article {
     min-height: 4800px;
-  }
+  } */
 
   .homepromo {display: none;}
   .homepromo.a {display: flex;}
@@ -514,32 +454,10 @@ footer {
   }
 
   article {
+    width: 100%;
+    height: auto;
+    justify-content: center;
     align-items: center;
-    min-height: 4500px;
-  }
-
-  .leftintro {
-    bottom: -75px;
-  }
-
-  .card:hover .leftintro {
-    bottom: -80px;
-  }
-
-  .centerintro {
-    bottom: -470px;
-  }
-
-  .card:hover .centerintro {
-    bottom: -475px;
-  }
-  
-  .rightintro {
-    bottom: -875px;
-  }
-
-  .card:hover .rightintro {
-    bottom: -880px;
   }
 
   .column {
@@ -553,9 +471,9 @@ footer {
 
 @media (max-width: 840px) {
 
-  article.home {
+ /*  article.home {
     height: 2200px;
-  }
+  } */
 
   table, .returns, .warranty, .loginform {
     width: 350px;
@@ -576,17 +494,6 @@ footer {
 }
 
 @media (max-width: 600px) {
-
-
-/*   article {
-    height: 210vh;
-  } */
-
-  .card .leftintro .centerintro .rightintro {
-
-    width: inherit;
-  }
-
   .column {
     flex: 100%;
     max-width: 100%;
