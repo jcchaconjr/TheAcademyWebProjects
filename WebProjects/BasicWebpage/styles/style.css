@@ -1,5 +1,22 @@
 /* styles to handle the sample web store project */
 
+:root {
+  --white: white;
+  --black: black;
+  --light-white: #f1f1f1;
+  --light-gold: #fbbe4f;
+  --purple: #4a62d8;
+  --almost-black: #1f1f1f;
+  --aquamarine: #76d0c0;
+  --dark-aquamarine: #1ab28a;
+  --violet: #746bab;
+  --translucent-violet: rgba(116, 107, 171, .5);
+  --translucent-purple: rgba(74, 98, 216, .5);
+  --translucent-aquamarine: rgba(26, 178, 138, .5);
+  --table-border-gray: #dddddd;
+}
+
+
 * {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
@@ -11,23 +28,23 @@
 
   a:link {
   text-decoration: none;
-  color:white;
+  color: var(--white);
 }
 
 a:visited {
   text-decoration: none;
-  color:white;
+  color:var(--white);
 }
 
 a:hover {
   text-decoration: none;
   font-weight: bolder;
-  color: #fbbe4f;
+  color: var(--light-gold);
 }
 
 a:active {
   text-decoration: underline;
-  color:white;
+  color: var(--white);
 
 }
 
@@ -57,7 +74,7 @@ a:active {
 
 /* Style the header */
 header {
-  background-color: #4a62d8;
+  background-color: var(--purple);
   padding: 5px;
   text-align: center;
 }
@@ -68,14 +85,14 @@ nav {
   float: left;
   width: 15%;
   /* height: 300px;  only for demonstration, should be removed */
-  background: #76d0c0;
+  background: var(--aquamarine);
   padding: 20px;
 }
 
 /* Style the list inside the menu */
 nav ul {
   list-style-type: none;
-  color: white;
+  color: var(--white);
   padding: 0;
 }
 
@@ -84,13 +101,13 @@ article {
   align-items: center;
   padding: 20px;
   width: 85%;
-  background-color: #f1f1f1;
+  background-color: #var(var(--light-white));
   /* height: 300px;  only for demonstration, should be removed */
 }
 
 /* use these with nav and article tags to size equally on each page... */
 .home {
-  height: 87vh;
+  height: 3000px;
 }
 
 .homecolumns {
@@ -98,10 +115,10 @@ article {
   column-gap: 50px;
   column-rule-style: solid;
   column-rule-width: 1px;
-  column-rule-color: #1f1f1f;
+  column-rule-color: var(--almost-black);
 }
 
-.store {
+ .store {
   height: 160vh;
 }
 
@@ -134,6 +151,7 @@ section::after {
   margin: 0px;  
   padding: 20px;
 	display:flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -149,7 +167,7 @@ section::after {
   top: 35%;
   left: 2%;
   width: 50%;
-  color: white;
+  color: var(--white);
 }
 
 .homepromo {
@@ -158,7 +176,7 @@ section::after {
   top: 60%;
   left: 2%;
   width: 30%;
-  color: white;
+  color: var(--white);
 }
 
 .shoplink {
@@ -168,7 +186,7 @@ font-size: 16px;
 top: 85%;
 left: 2%;
 width: 30%;
-color: white;
+color: var(--white);
 }
 
 /* === All effects for the About page cards... === */
@@ -187,20 +205,20 @@ card:hover {
 
 .card:hover .leftintro {
   height: 230px;
-  bottom: 20px;
-  background: #746bab;
+  bottom: 5px;
+  background: var(--violet);
 }
 
 .card:hover .centerintro {
   height: 230px;
-  bottom: 20px;
-  background: #4a62d8;
+  bottom: 5px;
+  background: var(--purple);
 }
 
 .card:hover .rightintro {
   height: 230px;
-  bottom: 20px;
-  background: #1ab28a;
+  bottom: 5px;
+  background: var(--dark-aquamarine);
 }
 
 .card:hover .cardtext {
@@ -231,41 +249,42 @@ card:hover {
 
 .leftintro {
   height: 70px;
-  width: 300px;
+  width: inherit;
   padding: 6px;
   box-sizing: border-box;
   position: absolute;
   bottom: 10px;
-  background: rgba(116, 107, 171, .5);
+  background: var(--translucent-violet);
   color: white;
   transition: .5s;
 }
 
 .centerintro {
   height: 70px;
-  width: 300px;
+  width: inherit;
   padding: 6px;
   box-sizing: border-box;
   position: absolute;
   bottom: 10px;
-  background: rgba(74, 98, 216, .5);
+  background: var(--translucent-purple);
   color: white;
   transition: .5s;
 }
 
 .rightintro {
   height: 70px;
-  width: 300px;
+  width: inherit;
   padding: 6px;
   box-sizing: border-box;
   position: absolute;
   bottom: 10px;
-  background: rgba(26, 178, 138, .5);
+  background: var(--translucent-aquamarine);
   color: white;
   transition: .5s;
 }
 
 .aboutimages {
+  position: relative;
   height: 350px;
   transition: .5s;
 }
@@ -273,7 +292,8 @@ card:hover {
 #leftbox {
   float: left;
   color:white;
-  background: #746bab;
+  bottom: 5%;
+  background: var(--violet);
   width: 33%;
   height: 280px;
 }
@@ -281,15 +301,17 @@ card:hover {
 #middlebox {
   float: left;
   color:white;
-  background: #4a62d8;
+  bottom: 5%;
+  background: var(--purple);
   width: 33%;
   height: 280px;
 }
 
 #rightbox {
   float: right;
-  color:white;
-  background: #1ab28a;
+  color:var(--white);
+  bottom: 5%;
+  background: var(--dark-aquamarine);
   width: 33%;
   height: 280px;
 }
@@ -408,35 +430,64 @@ footer {
   color: black;
 }
 
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-@media (max-width: 840px) {
-  nav, article {
-    width: 100%;
-  }
-  nav.home, nav.store, nav.register, nav.about {
-    height: 20vh;
-  }
-  article {
-    height: 220vh;
-  }
-
-  table, .returns, .warranty, .loginform {
-    width: 350px;
-  }
-
-  .homecolumns {
-    column-width: 200px;
-  }
-
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
 }
 
-@media (max-width: 600px) {
-  article {
-    height: 210vh;
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column.img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+
+@media(max-width: 1364px) {
+
+  article.about {
+    min-height: 1500px;
+  }
+
+  .leftintro, .centerintro {
+    bottom: 85px;
+  }
+
+  .card:hover .leftintro, .card:hover .centerintro {
+    bottom: 80px;
+  }
+  
+  .rightintro {
+    bottom: -325px;
+  }
+
+  .card:hover .rightintro {
+    bottom: -330px;
+  }
+
+  .rightintro {
+    bottom: -325px;
+  }
+
+  .card:hover .rightintro {
+    bottom: -330px;
   }
 }
 
 @media (max-width: 1150px) {
+
+  article {
+    min-height: 4800px;
+  }
 
   .homepromo {display: none;}
   .homepromo.a {display: flex;}
@@ -452,5 +503,92 @@ footer {
   .homecolumns {
     column-count: 2;
     column-gap: 40px;
+  }
+}
+
+@media(max-width: 950px) {
+
+  nav.home, nav.store, nav.register, nav.about {
+    width: 100%;
+    height: auto;
+  }
+
+  article {
+    align-items: center;
+    min-height: 4500px;
+  }
+
+  .leftintro {
+    bottom: -75px;
+  }
+
+  .card:hover .leftintro {
+    bottom: -80px;
+  }
+
+  .centerintro {
+    bottom: -470px;
+  }
+
+  .card:hover .centerintro {
+    bottom: -475px;
+  }
+  
+  .rightintro {
+    bottom: -875px;
+  }
+
+  .card:hover .rightintro {
+    bottom: -880px;
+  }
+
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+
+}
+
+
+
+@media (max-width: 840px) {
+
+  article.home {
+    height: 2200px;
+  }
+
+  table, .returns, .warranty, .loginform {
+    width: 350px;
+  }
+
+  .homecolumns {
+    column-width: 200px;
+  }
+
+}
+
+@media(max-width: 603px) {
+
+/*   article.about {
+    min-height: 1900px;
+  } */
+  
+}
+
+@media (max-width: 600px) {
+
+
+/*   article {
+    height: 210vh;
+  } */
+
+  .card .leftintro .centerintro .rightintro {
+
+    width: inherit;
+  }
+
+  .column {
+    flex: 100%;
+    max-width: 100%;
   }
 }
