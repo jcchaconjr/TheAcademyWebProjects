@@ -179,8 +179,8 @@ color: var(--white);
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 100px 50px;
-  padding: 100px 20px;
+  gap: 40px 10px;
+  padding: 40px 10px;
 }
 
 .aboutcontainer .card {
@@ -193,6 +193,10 @@ color: var(--white);
   border-radius: 15px;
   margin: 30px;
   overflow: hidden;
+}
+
+.cardtext {
+  padding: 0 5px;
 }
 
 card:hover {
