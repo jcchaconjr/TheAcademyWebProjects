@@ -93,6 +93,10 @@ a:active {
 
 }
 
+footer h4 {
+  font-weight: 600;
+}
+
 .elegant {
   font-family: "Alex Brush", cursive;
   font-size: 60px;
@@ -253,33 +257,6 @@ card:hover {
   transition: .5s;
 }
 
-#leftbox {
-  float: left;
-  color:white;
-  bottom: 5%;
-  background: var(--violet);
-  width: 33%;
-  height: 280px;
-}
-
-#middlebox {
-  float: left;
-  color:white;
-  bottom: 5%;
-  background: var(--purple);
-  width: 33%;
-  height: 280px;
-}
-
-#rightbox {
-  float: right;
-  color:var(--white);
-  bottom: 5%;
-  background: var(--dark-aquamarine);
-  width: 33%;
-  height: 280px;
-}
-
 table {
   /* font-family: arial, sans-serif; */
   border-collapse: collapse;
@@ -354,12 +331,26 @@ tr:nth-child(even) {
   color: white;
 }
 
+.subinput {
+  height: 30px;
+  width: 225px;
+}
+
 .loginbutton {
   background-color: #4a62d8;
   color: white;
   border-radius:15px;
   height: 30px;
   width: 80px;
+
+}
+
+.subbutton {
+  background-color: #4a62d8;
+  color: white;
+  border-radius:15px;
+  height: 30px;
+  width: 100px;
 
 }
 
@@ -388,9 +379,10 @@ tr:nth-child(even) {
 
 /* Style the footer */
 footer {
+  width: inherit;
   background-color: #fbbe4f;
-  padding: 10px;
   text-align: center;
+  padding: 10px;
   color: black;
 }
 
@@ -410,6 +402,30 @@ footer {
 .column.img {
   margin-top: 8px;
   vertical-align: middle;
+}
+
+.ftcontainer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: right;
+  gap: 40px 10px;
+  padding: 50px 30px;
+}
+
+.ftcolumn {
+  position: relative;
+  max-width: 25%;
+  padding: 0 10px;
+  gap: 1rem 3rem;
+  text-align: left;
+  display: inline-flexbox;
+}
+
+.ftcolumn a:hover {
+  color: var(--white);
 }
 
 
@@ -446,6 +462,10 @@ footer {
     height: auto;
   }
 
+  .ftcolumn {
+    min-width: 40%;
+  }
+
   article {
     width: 100%;
     height: auto;
@@ -478,5 +498,9 @@ footer {
   .column {
     flex: 100%;
     max-width: 100%;
+  }
+
+  .ftcolumn {
+    min-width: 50%;
   }
 }
