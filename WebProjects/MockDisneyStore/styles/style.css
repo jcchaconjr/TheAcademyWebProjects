@@ -165,6 +165,15 @@ section::after {
   color: var(--white);
 }
 
+.lghomepromo {
+  display: flex;
+}
+
+.smhomepromo {
+  text-align: center;
+  display: none;
+}
+
 .shoplink {
 
 position: absolute;
@@ -173,6 +182,30 @@ top: 85%;
 left: 2%;
 width: 30%;
 color: var(--white);
+}
+
+.shoplink a:link {
+  text-decoration: underline;
+}
+
+.shoplink a:hover {
+  text-decoration: underline;
+  font-weight: bolder;
+  color: white;
+}
+
+.smshoplink {
+  color: var(--almost-black);
+  }
+
+  .smshoplink a:link {
+    text-decoration: underline;
+  }
+
+.smshoplink a:hover {
+  text-decoration: underline;
+  font-weight: bolder;
+  color: var(--almost-black);
 }
 
 /* === All effects for the About page cards... === */
@@ -313,16 +346,6 @@ tr:nth-child(even) {
 
 .loginform a:hover, .registrationform a:hover {
   text-decoration: none;
-  font-weight: bolder;
-  color: white;
-}
-
-.shoplink a:link {
-  text-decoration: underline;
-}
-
-.shoplink a:hover {
-  text-decoration: underline;
   font-weight: bolder;
   color: white;
 }
@@ -492,5 +515,14 @@ footer {
 
   .ftcolumn {
     min-width: 50%;
+  }
+
+  .lghomepromo {
+    display: none;
+  }
+  
+  .smhomepromo {
+    width: 100%;
+    display: block;
   }
 }
