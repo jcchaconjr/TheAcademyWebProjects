@@ -73,23 +73,23 @@ article {
 
   a:link {
   text-decoration: none;
-  color: var(--white);
+  color: var(--anchorclr);
 }
 
 a:visited {
   text-decoration: none;
-  color:var(--white);
+  color:var(--anchorclr);
 }
 
 a:hover {
   text-decoration: none;
   font-weight: bolder;
-  color: var(--light-gold);
+  color: var(--anchorclr);
 }
 
 a:active {
   text-decoration: underline;
-  color: var(--white);
+  color: var(--anchorclr);
 
 }
 
@@ -201,10 +201,6 @@ color: var(--white);
 
 .cardtext {
   padding: 0 5px;
-}
-
-card:hover {
-  cursor: pointer;
 }
 
 .card:hover .intro {
@@ -423,12 +419,6 @@ footer {
   text-align: left;
   display: inline-flexbox;
 }
-
-.ftcolumn a:hover {
-  color: var(--white);
-}
-
-
 
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
 
