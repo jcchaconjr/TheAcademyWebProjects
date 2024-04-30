@@ -1,0 +1,7 @@
+function onPageLoad() {
+
+}
+
+function onLoginClick() {
+
+}
