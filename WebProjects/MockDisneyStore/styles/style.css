@@ -301,7 +301,7 @@ color: var(--white);
   transition: .5s;
 }
 
-table {
+table, .dyn-table {
   /* font-family: arial, sans-serif; */
   border-collapse: collapse;
   width: 60%;
@@ -309,22 +309,30 @@ table {
   margin-right:auto;
 }
 
+#table-fill, #header-fill {
+  display: none;
+}
+
+#table-fill {
+  width: 40%;
+}
+
 h1, h2, h3, form {
   text-align:center;
 }
 
-td, th {
+.table-style td, .table-style th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
 }
 
-th {
+.table-style th {
   color: #ffffff;
   background-color: #4a62d8;
 }
 
-tr:nth-child(even) {
+.table-style tr:nth-child(even) {
   background-color: #76d0c0;
 }
 

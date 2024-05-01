@@ -5,6 +5,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="styles/style.css">
+		<script src="scripts/script.js"></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -63,9 +64,38 @@
 					<p class="homepromo">Travel to a galaxy far, far away and discover clothing, collectibles, and more inspired by the epic saga.</p>
 				  </div>
 				  <br>
+				  <h1 id="header-fill">Popular Disney Characters</h1>
+
+				  <table id="table-fill" class="table-style">
+					<tr>
+						<th>Character</th>
+						<th>Rank</th>
+					</tr>
+				  </table>
+				  <!-- <script>
+					let characters = ["Mickey Mouse", "Minnie Mouse", "Goofy", "Donald Duck", "Pluto"];
+					let charHeader = document.getElementById("header-fill");
+					let charTable = document.getElementById("table-fill");
+
+					if (characters.length > 0) {
+						charHeader.style["display"] = "block";
+						charTable.style["display"] = "block";
+						
+						for (let i = 0; i < characters.length; i++) {
+							let charRank = i + 1;
+							let	tr = "<td>" + characters[i] + "</td><td>" + charRank + "</td>";
+							let parent = document.getElementById("table-fill");
+							let nodes = parent.children;
+							/* document.getElementById("table-fill").innerHTML += tr; */
+						}
+					}
+					
+
+				  </script> -->
+				  <br>
 				<h1>Today's Featured Items</h1>
 
-				<table>
+				<table class="table-style">
 				<tr>
 					<th>Product Name</th>
 					<th>Product Price</th>
@@ -108,7 +138,6 @@
 				</tr>
 				</table>
 				<br><br>
-
 				<div class="returns">
 					<h2>Return Policy</h2>
 					<p style="text-align: center;">Returns are accepted with original recept and with the items in like new condition. 
@@ -130,7 +159,8 @@
 						<input class="forminputs" type="text" id="uname" name="uname"></br>
 						<label for="password">Password</label><br>
 						<input class="forminputs" type="password" id="pword" name="uname"></br><br>
-						<input class="loginbutton" type="submit" value="Login">
+						<input class="loginbutton" onclick="loginClick()" type="button" value="Login">
+						<!-- Change button type back to "submit"! -->
 					</form>
 					<br>
 					<p style="text-align:center;">Don't have an account yet? Register <a href="register.html">HERE</a></p>
