@@ -11,7 +11,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 	</head>
 
-	<body>
+	<body onload="loadTable()">
 		<header>
 			<svg class="logo" xmlns="http://www.w3.org/2000/svg" width="216" height="60" viewBox="0 0 144 40" fill="#f1f1f1">
 				<path d="M96.0763 26.5332C95.9322 26.4495 95.8136 26.328 95.7334 26.1819C95.6532 26.0357 95.6145 25.8705 95.6212 25.7039C95.6197 25.5763 95.6438 25.4496 95.6919 25.3314C95.7401 25.2132 95.8114 25.1058 95.9017 25.0155C95.9919 24.9253 96.0993 24.854 96.2176 24.8058C96.3358 24.7576 96.4624 24.7336 96.5901 24.7351C96.7702 24.7389 96.9466 24.7868 97.1038 24.8747C98.1117 25.5462 99.1602 25.8826 100.108 25.8826C101.136 25.8826 101.729 25.4471 101.729 24.756V24.717C101.729 23.9059 100.622 23.6295 99.3961 23.2539C97.8605 22.8184 96.135 22.186 96.135 20.1897V20.1506C96.135 18.1738 97.7753 16.9677 99.8512 16.9677C100.997 16.9876 102.122 17.279 103.133 17.8178C103.304 17.9007 103.448 18.0298 103.549 18.1904C103.65 18.3511 103.705 18.5368 103.706 18.7266C103.705 18.8552 103.678 18.9823 103.628 19.1006C103.577 19.2189 103.504 19.3262 103.412 19.4162C103.321 19.5062 103.212 19.5772 103.093 19.6251C102.973 19.673 102.846 19.6969 102.717 19.6955C102.551 19.6987 102.387 19.6577 102.243 19.5768C101.392 19.1427 100.523 18.8648 99.7926 18.8648C98.8628 18.8648 98.3295 19.3004 98.3295 19.9133V19.9523C98.3295 20.7034 99.4561 21.0203 100.682 21.4154C102.203 21.89 103.923 22.5824 103.923 24.4601V24.4992C103.923 26.6937 102.223 27.7798 100.049 27.7798C98.6307 27.7693 97.2473 27.3357 96.0763 26.5346" fill="#f1f1f1"/>
@@ -64,34 +64,16 @@
 					<p class="homepromo">Travel to a galaxy far, far away and discover clothing, collectibles, and more inspired by the epic saga.</p>
 				  </div>
 				  <br>
-				  <h1 id="header-fill">Popular Disney Characters</h1>
 
-				  <table id="table-fill" class="table-style">
-					<tr>
-						<th>Character</th>
-						<th>Rank</th>
-					</tr>
-				  </table>
-				  <!-- <script>
-					let characters = ["Mickey Mouse", "Minnie Mouse", "Goofy", "Donald Duck", "Pluto"];
-					let charHeader = document.getElementById("header-fill");
-					let charTable = document.getElementById("table-fill");
-
-					if (characters.length > 0) {
-						charHeader.style["display"] = "block";
-						charTable.style["display"] = "block";
-						
-						for (let i = 0; i < characters.length; i++) {
-							let charRank = i + 1;
-							let	tr = "<td>" + characters[i] + "</td><td>" + charRank + "</td>";
-							let parent = document.getElementById("table-fill");
-							let nodes = parent.children;
-							/* document.getElementById("table-fill").innerHTML += tr; */
-						}
-					}
-					
-
-				  </script> -->
+				  <div id="div-load">
+					<h1>Most Popular Disney Characters by Merchandise Sales</h1>
+					<table id="table-fill" class="table-style">
+						<tr>
+							<th>Character</th>
+							<th>Rank</th>
+						</tr>
+					</table>
+				</div>
 				  <br>
 				<h1>Today's Featured Items</h1>
 

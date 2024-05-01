@@ -301,7 +301,7 @@ color: var(--white);
   transition: .5s;
 }
 
-table, .dyn-table {
+table {
   /* font-family: arial, sans-serif; */
   border-collapse: collapse;
   width: 60%;
@@ -309,7 +309,7 @@ table, .dyn-table {
   margin-right:auto;
 }
 
-#table-fill, #header-fill {
+#div-load {
   display: none;
 }
 
@@ -321,19 +321,20 @@ h1, h2, h3, form {
   text-align:center;
 }
 
-.table-style td, .table-style th {
+
+tr:nth-child(even) {
+  background-color: #76d0c0;
+}
+
+td, th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
 }
 
-.table-style th {
+th {
   color: #ffffff;
   background-color: #4a62d8;
-}
-
-.table-style tr:nth-child(even) {
-  background-color: #76d0c0;
 }
 
 .returns {
@@ -520,9 +521,10 @@ footer {
 
 @media (max-width: 840px) {
 
-  table, .returns, .warranty, .loginform {
+  table, #table-fill, .returns, .warranty, .loginform {
     width: 350px;
   }
+
 
   .homecolumns {
     column-width: 200px;
