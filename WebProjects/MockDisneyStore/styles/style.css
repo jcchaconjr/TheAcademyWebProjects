@@ -355,7 +355,7 @@ th {
   border-radius: 15px;
 }
 
-.loginform {
+.loginform, .inventoryform {
   background-color:#fbbe4f;
   width: 425px;
   margin:auto;
@@ -379,7 +379,7 @@ th {
   width: 225px;
 }
 
-.loginbutton {
+.loginbutton, .addInventory {
   background-color: #4a62d8;
   color: white;
   border-radius:15px;
