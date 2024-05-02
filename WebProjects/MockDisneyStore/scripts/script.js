@@ -17,6 +17,7 @@ function loadTable() {
     let fillTable = document.getElementById("table-fill");
     let goldenBackground = "";
     let mickeyInList = false;
+    let tbl = `<tr>\n<th>Character</th>\n<th>Rank</th>\n</tr>`;
 
     for (let i = 0; i < characters.length; i++) {
         let charRank = i + 1;
@@ -25,11 +26,11 @@ function loadTable() {
         if (foundMickey) {
             goldenBackground = " style=\'background-color:#fbbe4f;\'";
         }
-        let	tr = "<tr><td" + goldenBackground + ">" + characters[i] + "</td><td style=\'text-align:center;\'>" + charRank + "</td></tr>";
-        fillTable.innerHTML += tr;
+        tbl += "<tr><td" + goldenBackground + ">" + characters[i] + "</td><td style=\'text-align:center;\'>" + charRank + "</td></tr>\n";
         goldenBackground = "";
     }
-    if (mickeyInList) {charTable.innerHTML += "<h1>Once again, Mickey Mouse is one of our best sellers!</h1>";}
+    fillTable.innerHTML = tbl;
+    if (mickeyInList) {charTable.innerHTML += "<br><h1>Once again, Mickey Mouse is one of our best sellers!</h1>";}
 
     if (characters.length > 0) {
         charTable.style["display"] = "block";

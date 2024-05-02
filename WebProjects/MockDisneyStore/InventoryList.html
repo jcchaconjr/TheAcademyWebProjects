@@ -65,9 +65,9 @@
 					<h2>Add to Inventory</h2>
 					<form id="invform">
 						<label for="product">Product Name</label><br>
-						<input class="forminputs" type="text" id="prod" name="prod"></br>
+						<input class="forminputs" type="text" id="prod" name="prod" onfocus="document.getElementById('resultMsg').innerHTML = ''"></br>
 						<label for="category">Category</label><br>
-						<select class="forminputs" id="category" name="category">
+						<select class="forminputs" id="category" name="category" onfocus="document.getElementById('resultMsg').innerHTML = ''">
 							<option value="Toys">Toys</option>
 							<option value="Clothing">Clothing</option>
 							<option value="Accessories">Accessories</option>
@@ -75,9 +75,9 @@
 							<option value="Collectibles">Collectibles</option>
 						</select></br>
                         <label for="characterName">Character Name</label><br>
-						<input class="forminputs" type="text" id="charName" name="charName"></br>
+						<input class="forminputs" type="text" id="charName" name="charName" onfocus="document.getElementById('resultMsg').innerHTML = ''"></br>
                         <label for="franchise">Franchise</label><br>
-						<select class="forminputs" id="franchise" name="frnchise">
+						<select class="forminputs" id="franchise" name="franchise" onfocus="document.getElementById('resultMsg').innerHTML = ''">
 							<option value="Disney">Disney</option>
 							<option value="MARVEL">MARVEL</option>
 							<option value="Pixar">Pixar</option>
@@ -85,7 +85,7 @@
 							<option value="Star Wars">Star Wars</option>
 						</select></br>
                         <label for="movieShow">Movie/Show</label><br>
-						<input class="forminputs" type="text" id="movieShow" name="movieShow">
+						<input class="forminputs" type="text" id="movieShow" name="movieShow" onfocus="document.getElementById('resultMsg').innerHTML = ''">
 						<br><br>
 						<input class="addInventory" onclick="addProduct(prod.value, category.value, charName.value, franchise.value, movieShow.value)" type="button" value="Add">
 						<!-- Change button type back to "submit"! -->
@@ -103,7 +103,7 @@
 							<th>Category</th>
                             <th>Character Name</th>
                             <th>Franchise</th>
-                            <th>Movie/Show</th>
+                            <th>Movie / Show</th>
 						</tr>
 					</table>
                 </div>

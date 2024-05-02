@@ -521,7 +521,7 @@ footer {
 
 @media (max-width: 840px) {
 
-  table, #table-fill, .returns, .warranty, .loginform {
+  table, .returns, .warranty, .loginform {
     width: 350px;
   }
 
