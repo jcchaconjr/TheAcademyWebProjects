@@ -67,20 +67,34 @@
 						<label for="product">Product Name</label><br>
 						<input class="forminputs" type="text" id="prod" name="prod"></br>
 						<label for="category">Category</label><br>
-						<input class="forminputs" type="text" id="category" name="category"></br>
+						<select class="forminputs" id="category" name="category">
+							<option value="Toys">Toys</option>
+							<option value="Clothing">Clothing</option>
+							<option value="Accessories">Accessories</option>
+							<option value="Home">Home Decor</option>
+							<option value="Collectibles">Collectibles</option>
+						</select></br>
                         <label for="characterName">Character Name</label><br>
 						<input class="forminputs" type="text" id="charName" name="charName"></br>
                         <label for="franchise">Franchise</label><br>
-						<input class="forminputs" type="text" id="franchise" name="franchise"></br>
-                        <label for="franchise">Movie/Show</label><br>
-						<input class="forminputs" type="text" id="movieShow" name="movieShow"><br><br>
-						<input class="addInventory" onclick="addProduct()" type="button" value="Add">
+						<select class="forminputs" id="franchise" name="frnchise">
+							<option value="Disney">Disney</option>
+							<option value="MARVEL">MARVEL</option>
+							<option value="Pixar">Pixar</option>
+							<option value="National Geographic">National Geographic</option>
+							<option value="Star Wars">Star Wars</option>
+						</select></br>
+                        <label for="movieShow">Movie/Show</label><br>
+						<input class="forminputs" type="text" id="movieShow" name="movieShow">
+						<br><br>
+						<input class="addInventory" onclick="addProduct(prod.value, category.value, charName.value, franchise.value, movieShow.value)" type="button" value="Add">
 						<!-- Change button type back to "submit"! -->
 					</form>
 					<br>
 				</div>
                 <br>
                 <h1 id="resultMsg"></h1>
+				<br><br>
                 <div>
 					<h1>Product List</h1>
 					<table id="prod-fill" class="table-style">
