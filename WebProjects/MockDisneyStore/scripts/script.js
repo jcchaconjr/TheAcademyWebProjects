@@ -1,5 +1,5 @@
 
-let characters = [ "Mickey Mouse", "Minnie Mouse", "Goofy", "Donald Duck", "Pluto"];
+let characters = ["Mickey Mouse", "Minnie Mouse", "Goofy", "Donald Duck", "Pluto"];
 
 function loginClick() {
 
